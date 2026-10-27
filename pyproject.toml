@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gemini-cli"
+version = "0.1.0"
+description = "A simple command-line chat client for Gemini."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=1.0.0",
+    "httpx>=0.28.1",
+    "tomli>=2.0.1; python_version < '3.11'",
+]
+
+[project.scripts]
+gemini-cli = "gemini_cli:main"
+
+[tool.setuptools]
+py-modules = ["gemini_cli"]
